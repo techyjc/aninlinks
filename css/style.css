@@ -1,0 +1,159 @@
+:root {
+    box-sizing: border-box;
+    --col-twitter: #439CD6;
+    --col-whatsapp: #3DB54A;
+    --col-youtube: #E21F26;
+
+    --neutral-100: #fff;
+    --neutral-500: #6a6a6a;
+    --neutral-700: #2e2e2e;
+}
+
+body {
+    background-color: #2e2e2e;
+    display: grid;
+    height: 100vh;
+    margin: 0px;
+    place-items: center;
+}
+
+.social-wrapper {
+    background-color: var(--neutral-500);
+    display: flex;
+    flex-direction: row;
+    isolation: isolate;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
+
+.social-network {
+    height: 400px;
+    position: relative;
+}
+
+.social-network:nth-of-type(1)::before {
+    background-color: var(--col-twitter);
+    content: '';
+    display: block;
+    height: 0px;
+    transition: height 0.5s;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.social-network:nth-of-type(1):hover::before {
+    height: 100%;
+}
+
+.social-network:nth-of-type(1)::after {
+    background-color: var(--col-twitter);
+    border-radius: 50vw;
+    content: '';
+    display: block;
+    height: 20px;
+    inset-inline: 2.5%;
+    top: 0px;
+    transition: top 0.5s;
+    position: absolute;
+    width: 95%;
+    z-index: 1;
+}
+
+.social-network:nth-of-type(1):hover::after {
+    top: 380px;
+}
+
+.social-network:nth-of-type(2)::before {
+    background-color: var(--col-whatsapp);
+    content: '';
+    display: block;
+    height: 0px;
+    transition: height 0.5s;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    
+}
+
+.social-network:nth-of-type(2):hover::before {
+    height: 100%;
+}
+
+.social-network:nth-of-type(2)::after {
+    background-color: var(--col-whatsapp);
+    border-radius: 50vw;
+    content: '';
+    display: block;
+    height: 20px;
+    inset-inline: 2.5%;
+    top: 0px;
+    transition: top 0.5s;
+    position: absolute;
+    width: 95%;
+    z-index: 1;
+}
+
+.social-network:nth-of-type(2):hover::after {
+    top: 380px;
+}
+
+.social-network:nth-of-type(3)::before {
+    background-color: var(--col-youtube);
+    content: '';
+    display: block;
+    height: 0px;
+    transition: height 0.5s;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.social-network:nth-of-type(3):hover::before {
+    height: 100%;
+}
+
+.social-network:nth-of-type(3)::after {
+    background-color: var(--col-youtube);
+    border-radius: 50vw;
+    content: '';
+    display: block;
+    height: 20px;
+    inset-inline: 2.5%;
+    top: 0px;
+    transition: top 0.5s;
+    position: absolute;
+    width: 95%;
+    z-index: 1;
+}
+
+.social-network:nth-of-type(3):hover::after {
+    top: 380px;
+}
+
+.twitter, .whatsapp, .youtube {
+    display: block;
+    fill: var(--neutral-700);
+    mask-mode: alpha;
+    z-index: 0;
+}
+
+.twitter {
+    mask-image: url(#twitter);
+}
+
+.whatsapp {
+    mask-image: url(#whatsapp);
+}
+
+.youtube {
+    mask-image: url(#youtube);
+}
+
+.social-icon {
+    display: block;
+    width: 400px;
+}
+
